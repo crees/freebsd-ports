@@ -1,5 +1,5 @@
 freebsd_instance:
-    image_family: freebsd-12-2-release-amd64
+    image_family: freebsd-12-2
 
 task:
     build_script: ASSUME_ALWAYS_YES=yes pkg bootstrap -f
