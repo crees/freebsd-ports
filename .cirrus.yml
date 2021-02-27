@@ -1,0 +1,9 @@
+freebsd_instance:
+    image_family: freebsd-12-2
+
+task:
+    install_script:
+        - ASSUME_ALWAYS_YES=yes pkg bootstrap -f
+        - make BATCH=yes -C graphics/drm-fbsd12.2-kmod package
+    binaries_artifacts:
+        path: "/usr/ports/packages/*"
